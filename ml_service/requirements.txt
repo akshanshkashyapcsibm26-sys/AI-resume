@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pandas
+scikit-learn
+numpy
+python-multipart
+joblib
+pdfminer.six
+python-docx
+pypdf
+pytesseract
+pdf2image
+pillow
