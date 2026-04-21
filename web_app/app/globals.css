@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    --background: #FAFBFD;
+    --foreground: #212727;
+    --primary: #2DC08C;
+    --primary-foreground: #ffffff;
+    --secondary: #B9B4DC;
+    --secondary-foreground: #212727;
+    --accent: #B9B4DC;
+    --accent-foreground: #212727;
+    --danger: #ef4444;
+    --danger-dark: #b91c1c;
+    --success: #2DC08C;
+    --success-dark: #15803d;
+    --warning: #eab308;
+    --warning-dark: #a16207;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Production Card Base */
+.brutalist-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border-radius: 1rem;
+}
+
+.brutalist-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Production Button Base */
+.brutalist-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-transform: none;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    background-color: #ffffff;
+    color: var(--foreground);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.brutalist-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.brutalist-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Button Variants */
+.brutalist-button-primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    box-shadow: 0 10px 20px -10px rgba(45, 192, 140, 0.5);
+}
+
+.brutalist-button-primary:hover {
+    background-color: #25a075;
+    box-shadow: 0 20px 30px -10px rgba(45, 192, 140, 0.6);
+}
+
+/* Production Input */
+.brutalist-input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    background-color: #ffffff;
+    color: var(--foreground) !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.brutalist-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(45, 192, 140, 0.1);
+    color: var(--foreground) !important;
+}
+
+.brutalist-input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+/* Production Header */
+.brutalist-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Utilities */
+.text-balance {
+    text-wrap: balance;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
